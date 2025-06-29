@@ -27,8 +27,7 @@ const About = () => {
               text={[
                 'Fullstack Developer',
                 'Data Science engineer',
-                'Coder',
-                'programer'
+                'Coder'
               ]}
               speed={100}
               eraseSpeed={50}

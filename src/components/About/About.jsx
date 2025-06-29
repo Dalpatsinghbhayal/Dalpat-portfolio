@@ -28,6 +28,7 @@ const About = () => {
                 'Fullstack Developer',
                 'Data Science engineer',
                 'Coder',
+                'programer'
               ]}
               speed={100}
               eraseSpeed={50}

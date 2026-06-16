@@ -221,7 +221,7 @@ export const SkillsInfo = [
         "This project is an image classification system built to accurately distinguish between images of dogs and cats. Using a convolutional neural network (CNN) trained on a labeled dataset, the model analyzes visual features and predicts the correct category. The application is capable of processing user-uploaded images and returns real-time classification results. It showcases the power of deep learning in computer vision and serves as a foundational step for more complex object recognition tasks.",
       image: ImageClassification,
       tags: ["Python", "Deep Learning", "TensorFlow / Keras", "Convolutional Neural Networks (CNNs)", "Image Preprocessing (Resizing, Normalization)", "Git & GitHub"],
-      github: "https://github.com/Dalpatsinghbhayal/dog-cat-image-classify"
+      github: "https://github.com/Dalpatsinghbhayal/dog-cat-image-classify",
       // webapp: "https://csprep.netlify.app/",
     },
     {

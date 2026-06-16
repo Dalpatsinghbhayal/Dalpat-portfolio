@@ -103,14 +103,31 @@ const Work = () => {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a
+                {  <a
+  href={selectedProject.github}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    fill="currentColor"
+    viewBox="0 0 16 16"
+  >
+    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59..." />
+  </svg>
+  View on GitHub
+</a>}
+                  {/* <a
                     href={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
                   >
                     View Code
-                  </a>
+                  </a> */}
                   {/* <a
                     href={selectedProject.webapp}
                     target="_blank"

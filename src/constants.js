@@ -1,44 +1,4 @@
-// ==========================================
-// SKILLS SECTION LOGOS
-// ==========================================
 
-import htmlLogo from './assets/tech_logo/html.png';
-import cssLogo from './assets/tech_logo/css.png';
-import javascriptLogo from './assets/tech_logo/javascript.png';
-import reactjsLogo from './assets/tech_logo/reactjs.png';
-import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
-import bootstrapLogo from './assets/tech_logo/bootstrap.png';
-import nodejsLogo from './assets/tech_logo/nodejs.png';
-import expressjsLogo from './assets/tech_logo/express.png';
-import mysqlLogo from './assets/tech_logo/mysql.png';
-import mongodbLogo from './assets/tech_logo/mongodb.png';
-import firebaseLogo from './assets/tech_logo/firebase.png';
-import cLogo from './assets/tech_logo/c.png';
-import javaLogo from './assets/tech_logo/java.png';
-import pythonLogo from './assets/tech_logo/python.png';
-import gitLogo from './assets/tech_logo/git.png';
-import githubLogo from './assets/tech_logo/github.png';
-import vscodeLogo from './assets/tech_logo/vscode.png';
-import postmanLogo from './assets/tech_logo/postman.png';
-import vercelLogo from './assets/tech_logo/vercel.png';
-
-
-// ==========================================
-// EXPERIENCE SECTION LOGOS
-// ==========================================
-
-import celebal from './assets/company_logo/download (1).jpeg';
-import wscube from './assets/company_logo/download (2).jpeg';
-import upflair from './assets/company_logo/download.jpeg';
-import GrasTech from './assets/company_logo/download.png';
-
-
-// ==========================================
-// EDUCATION SECTION LOGOS
-// ==========================================
-
-import JIET from './assets/education_logo/JIET.jpg';
-import GSSS from './assets/education_logo/GSSS.jpeg';
 
 
 // ==========================================
@@ -47,109 +7,95 @@ import GSSS from './assets/education_logo/GSSS.jpeg';
 
 export const SkillsInfo = [
   {
-    title: 'Frontend',
+    title: "Frontend",
 
     skills: [
       {
-        name: 'HTML',
-        logo: htmlLogo
+        name: "HTML"
       },
       {
-        name: 'CSS',
-        logo: cssLogo
+        name: "CSS"
       },
       {
-        name: 'JavaScript',
-        logo: javascriptLogo
+        name: "JavaScript"
       },
       {
-        name: 'React JS',
-        logo: reactjsLogo
+        name: "React JS"
       },
       {
-        name: 'Tailwind CSS',
-        logo: tailwindcssLogo
+        name: "Tailwind CSS"
       },
       {
-        name: 'Bootstrap',
-        logo: bootstrapLogo
+        name: "Bootstrap"
       }
     ]
   },
 
   {
-    title: 'Backend',
+    title: "Backend",
 
     skills: [
       {
-        name: 'Node JS',
-        logo: nodejsLogo
+        name: "Java"
       },
       {
-        name: 'Express JS',
-        logo: expressjsLogo
+        name: "Spring Boot"
       },
       {
-        name: 'MySQL',
-        logo: mysqlLogo
+        name: "Hibernate"
       },
       {
-        name: 'MongoDB',
-        logo: mongodbLogo
+        name: "JPA"
       },
       {
-        name: 'Firebase',
-        logo: firebaseLogo
+        name: "REST API"
+      },
+      {
+        name: "MySQL"
+      },
+      {
+        name: "MongoDB"
       }
     ]
   },
 
   {
-    title: 'Languages',
+    title: "Languages",
 
     skills: [
       {
-        name: 'C',
-        logo: cLogo
+        name: "Java"
       },
       {
-        name: 'Java',
-        logo: javaLogo
+        name: "JavaScript"
       },
       {
-        name: 'Python',
-        logo: pythonLogo
+        name: "Python"
       },
       {
-        name: 'JavaScript',
-        logo: javascriptLogo
+        name: "C"
       }
     ]
   },
 
   {
-    title: 'Tools',
+    title: "Tools",
 
     skills: [
       {
-        name: 'Git',
-        logo: gitLogo
+        name: "Git"
       },
       {
-        name: 'GitHub',
-        logo: githubLogo
+        name: "GitHub"
       },
       {
-        name: 'VS Code',
-        logo: vscodeLogo
+        name: "VS Code"
       },
       {
-        name: 'Postman',
-        logo: postmanLogo
+        name: "Postman"
       },
       {
-        name: 'Vercel',
-        logo: vercelLogo
+        name: "Vercel"
       }
     ]
   }
@@ -158,12 +104,13 @@ export const SkillsInfo = [
 // ==========================================
 // EXPERIENCE
 // ==========================================
+// ==========================================
+// EXPERIENCE
+// ==========================================
 
 export const experiences = [
   {
     id: 0,
-
-    img: celebal,
 
     role: "Data Science Intern",
 
@@ -181,53 +128,58 @@ export const experiences = [
       "Data Cleaning & Preprocessing",
       "Exploratory Data Analysis (EDA)",
       "Feature Engineering",
-      "Machine Learning Algorithms (Supervised & Unsupervised)",
-      "TensorFlow, Keras, PyTorch",
-      "NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, Statsmodels",
-      "Flask, FastAPI, Streamlit"
+      "Machine Learning",
+      "TensorFlow",
+      "Keras",
+      "PyTorch",
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+      "Flask",
+      "FastAPI",
+      "Streamlit"
     ]
   },
-
 
   {
     id: 1,
 
-    img: wscube,
+    role: "Full Stack Development Trainee",
 
-    role: "Fullstack Engineer",
-
-    company: "WsCube",
+    company: "WsCube Tech",
 
     date: "1-April-2024 - 1-April-2025",
 
     desc:
-      "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
+      "Completed hands-on Full Stack Development training with practical experience in frontend and backend technologies. Worked on web development projects using ReactJS, JavaScript, HTML, CSS, SQL, Bootstrap, and Tailwind CSS while learning responsive design, application development, and modern development practices.",
 
     skills: [
-      "ReactJS",
-      "Redux",
+      "React JS",
       "JavaScript",
-      "Tailwind CSS",
       "HTML",
       "CSS",
-      "SQL"
+      "Bootstrap",
+      "Tailwind CSS",
+      "Redux",
+      "SQL",
+      "Git",
+      "GitHub"
     ]
   },
-
 
   {
     id: 2,
 
-    img: upflair,
-
-    role: "Data Science Intern",
+    role: "Data Science Trainee",
 
     company: "UpFlairs",
 
     date: "15-May-2024 - 30-July-2024",
 
     desc:
-      "Applied data science techniques to extract meaningful insights from complex datasets and built machine learning models to solve real-world problems. Proficient in data preprocessing, exploratory analysis, feature selection, and implementing algorithms such as regression, classification, clustering, and ensemble methods. Experienced in evaluating model performance, deploying solutions using tools like Flask or Streamlit, and presenting results through clear, interactive visualizations.",
+      "Completed hands-on Data Science training with practical experience in data preprocessing, exploratory data analysis, feature engineering, and machine learning. Worked with real-world datasets and developed predictive models using Python and popular data science libraries.",
 
     skills: [
       "Python",
@@ -236,8 +188,8 @@ export const experiences = [
       "Scikit-learn",
       "TensorFlow",
       "Keras",
-      "Matplotlib",
-      "Seaborn",
+      "Machine Learning",
+      "Data Analysis",
       "Flask",
       "Streamlit",
       "FastAPI",
@@ -245,37 +197,34 @@ export const experiences = [
       "GitHub",
       "Jupyter Notebook",
       "VS Code",
-      "Google Colab",
       "SQL"
     ]
   },
 
-
   {
     id: 3,
 
-    img: GrasTech,
-
-    role: "Data Science Intern",
+    role: "Frontend Development Trainee",
 
     company: "GrasTech",
 
     date: "15-May-2025 - 30-Aug-2025",
 
     desc:
-      "Worked on full-stack web development using the MERN stack. The technology stack included MongoDB for database management, Express.js for backend development, React.js for frontend development, and Node.js as the runtime environment. Worked on responsive and dynamic web applications while using Git and GitHub for version control and collaboration.",
+      "Completed hands-on Frontend Development training focused on building responsive and interactive web applications. Worked with HTML, CSS, JavaScript, React JS, and Tailwind CSS to develop reusable components and user-friendly interfaces while using Git and GitHub for version control.",
 
     skills: [
-      "MongoDB",
-      "Express.js",
-      "React.js",
-      "Node.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React JS",
+      "Tailwind CSS",
+      "Responsive Design",
       "Git",
       "GitHub"
     ]
   }
 ];
-
 
 // ==========================================
 // EDUCATION
@@ -285,34 +234,31 @@ export const education = [
   {
     id: 0,
 
-    img: JIET,
-
-    Collage: "JIET,JODHPUR",
+    school: "JIET,JODHPUR",
 
     date: "Sept 2022 - Present",
 
     grade: "7.9 CGPA",
 
     desc:
-      "I am currently pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning (AIML) from JIET Jodhpur. My coursework covers core subjects such as Data Structures, Algorithms, Object-Oriented Programming, DBMS, Web Development, and Software Engineering, along with specialized topics like machine learning, deep learning, and AI applications. I actively participate in technical workshops, hackathons, and hands-on projects to enhance my practical understanding and problem-solving skills.",
+      "I am currently pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning (AIML) from JIET Jodhpur. My coursework covers Data Structures, Algorithms, Object-Oriented Programming, DBMS, Web Development, Software Engineering, Machine Learning, Deep Learning, and AI applications.",
 
     degree: "Bachelor of Technology"
   },
 
-
   {
     id: 1,
 
-    img: GSSS,
-
     school: "GSSS,PALI",
 
-    date: "JULY 2021 - JULY 2022",
+    date: "July 2021 - July 2022",
 
     grade: "79.9%",
 
     desc:
-      "I have completed my 12th grade under the RBSE (Rajasthan Board of Secondary Education) from Government Senior Secondary School (GSSS), Bagri Nagar, Pali, with a focus on the Science stream (Mathematics). My studies included core subjects such as Physics, Chemistry, Mathematics, and English, which helped me develop strong analytical thinking and problem-solving skills."
+      "Completed 12th grade under the RBSE (Rajasthan Board of Secondary Education) from Government Senior Secondary School (GSSS), Bagri Nagar, Pali, with a focus on the Science stream with Mathematics. Studied Physics, Chemistry, Mathematics, and English.",
+
+    degree: "Senior Secondary (12th Grade)"
   }
 ];
 

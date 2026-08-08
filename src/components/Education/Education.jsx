@@ -1,80 +1,210 @@
 import React from "react";
-import { education } from "../../constants"; // Import the education data
+import { education } from "../../constants";
+
+const educationLogos = {
+  "JIET,JODHPUR":
+    "https://www.google.com/s2/favicons?domain=jietjodhpur.ac.in&sz=128",
+
+  "GSSS,PALI":
+    "https://www.google.com/s2/favicons?domain=rajeduboard.rajasthan.gov.in&sz=128",
+};
 
 const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
+      className="py-20 px-[5vw] md:px-[7vw] lg:px-[10vw]"
     >
-      {/* Section Title */}
+      {/* ================= SECTION HEADING ================= */}
+
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          My education has been a journey of learning and development. Here are the details of my academic background
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
+          EDUCATION
+        </h2>
+
+        <div className="w-24 h-1 bg-purple-500 mx-auto mt-3"></div>
+
+        <p className="text-gray-400 mt-4 text-sm md:text-base max-w-2xl mx-auto">
+          My education has been a journey of learning and development.
+          Here are the details of my academic background.
         </p>
       </div>
 
-      {/* Education Timeline */}
-      <div className="relative">
-        {/* Vertical line */}
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
+      {/* ================= TIMELINE ================= */}
 
-        {/* Education Entries */}
-        {education.map((edu, index) => (
-          <div
-            key={edu.id}
-            className={`flex flex-col sm:flex-row items-center mb-16 ${
-              index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
-            }`}
-          >
-            {/* Timeline Circle */}
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
-              <img
-                src={edu.img}
-                alt={edu.school}
-                className="w-full h-full object-cover rounded-full"
-              />
-            </div>
+      <div className="relative max-w-6xl mx-auto">
 
-            {/* Content Section */}
-            <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
-                index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-              } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
-            >
-              {/* Flex container for image and text */}
-              <div className="flex items-center space-x-6">
-                {/* School Logo/Image */}
-                <div className="w-24 h-16 bg-white rounded-md overflow-hidden">
-                  <img
-                    src={edu.img}
-                    alt={edu.school}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+        {/* Vertical Line */}
 
-                {/* Degree, School Name, and Date */}
-                <div className="flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-xl sm:text-xl font-semibold text-white">
-                      {edu.degree}
-                    </h3>
-                    <h4 className="text-md sm:text-sm text-gray-300">
-                      {edu.school}
-                    </h4>
+        <div
+          className="
+            absolute
+            left-4
+            md:left-1/2
+            top-0
+            bottom-0
+            w-[2px]
+            bg-purple-500/50
+            md:-translate-x-1/2
+          "
+        ></div>
+
+        {/* Education Items */}
+
+        <div className="space-y-12">
+
+          {education.map((edu, index) => {
+            const logo =
+              educationLogos[edu.school] ||
+              "https://www.google.com/s2/favicons?domain=google.com&sz=128";
+
+            return (
+              <div
+                key={edu.id}
+                className="relative flex items-start"
+              >
+
+                {/* ================= TIMELINE DOT ================= */}
+
+                <div
+                  className="
+                    absolute
+                    left-4
+                    md:left-1/2
+                    -translate-x-1/2
+                    w-8
+                    h-8
+                    rounded-full
+                    bg-gray-900
+                    border-4
+                    border-purple-500
+                    z-10
+                    shadow-[0_0_15px_rgba(130,69,236,0.7)]
+                  "
+                ></div>
+
+
+                {/* ================= EDUCATION CARD ================= */}
+
+                <div
+                  className={`
+                    w-full
+                    md:w-[45%]
+                    ml-12
+                    md:ml-0
+                    ${
+                      index % 2 === 0
+                        ? "md:mr-auto md:pr-10"
+                        : "md:ml-auto md:pl-10"
+                    }
+                  `}
+                >
+
+                  <div
+                    className="
+                      bg-gray-900/90
+                      backdrop-blur-md
+                      border
+                      border-gray-700
+                      rounded-2xl
+                      p-6
+                      shadow-[0_0_20px_1px_rgba(130,69,236,0.2)]
+                      hover:border-purple-500
+                      hover:shadow-[0_0_30px_1px_rgba(130,69,236,0.35)]
+                      hover:-translate-y-1
+                      transition-all
+                      duration-300
+                    "
+                  >
+
+                    {/* ================= EDUCATION HEADER ================= */}
+
+                    <div className="flex items-center gap-4 mb-5">
+
+                      {/* Institution Logo */}
+
+                      <div
+                        className="
+                          w-16
+                          h-16
+                          flex
+                          items-center
+                          justify-center
+                          bg-white
+                          rounded-xl
+                          p-2
+                          shrink-0
+                        "
+                      >
+                        <img
+                          src={logo}
+                          alt={`${edu.school} logo`}
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                        />
+                      </div>
+
+
+                      {/* Degree / School / Date */}
+
+                      <div className="min-w-0">
+
+                        <h3 className="text-lg md:text-xl font-bold text-white">
+                          {edu.degree || "Education"}
+                        </h3>
+
+                        <p className="text-purple-400 font-semibold text-sm mt-1">
+                          {edu.school}
+                        </p>
+
+                        <p className="text-gray-500 text-xs mt-1">
+                          {edu.date}
+                        </p>
+
+                      </div>
+
+                    </div>
+
+
+                    {/* ================= GRADE ================= */}
+
+                    <div className="mb-4">
+
+                      <span
+                        className="
+                          inline-block
+                          bg-[#251f38]
+                          text-purple-400
+                          border
+                          border-purple-500/30
+                          px-4
+                          py-2
+                          rounded-full
+                          text-sm
+                          font-semibold
+                        "
+                      >
+                        Grade: {edu.grade}
+                      </span>
+
+                    </div>
+
+
+                    {/* ================= DESCRIPTION ================= */}
+
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {edu.desc}
+                    </p>
+
                   </div>
-                  {/* Date at the bottom */}
-                  <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
-                </div>
-              </div>
 
-              <p className="mt-4 text-gray-400 font-bold">Grade: {edu.grade}</p>
-              <p className="mt-4 text-gray-400">{edu.desc}</p>
-            </div>
-          </div>
-        ))}
+                </div>
+
+              </div>
+            );
+          })}
+
+        </div>
       </div>
     </section>
   );

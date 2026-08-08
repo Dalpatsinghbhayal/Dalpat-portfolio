@@ -14,129 +14,171 @@ const Work = () => {
 
   return (
     <section
-      id="work"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative"
+      id="projects"
+      className="py-20 px-[5vw] md:px-[7vw] lg:px-[10vw]"
     >
-      {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">PROJECTS</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+      {/* Section Heading */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
+          PROJECTS
+        </h2>
+
+        <div className="w-24 h-1 bg-purple-500 mx-auto mt-3"></div>
+
+        <p className="text-gray-400 mt-4 text-sm md:text-base">
           A showcase of the projects I have worked on, highlighting my skills
           and experience in various technologies
         </p>
       </div>
 
       {/* Projects Grid */}
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <div
             key={project.id}
-            onClick={() => handleOpenModal(project)}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300"
+            className="border border-gray-700 bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden hover:shadow-purple-500/40 hover:-translate-y-2 transition-all duration-300"
           >
-            <div className="p-4">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-xl"
-              />
+            {/* Project Header */}
+            <div className="h-40 flex items-center justify-center bg-gradient-to-br from-purple-900/50 via-gray-900 to-pink-900/30">
+              <div className="text-center px-5">
+                <div className="text-4xl mb-3">💻</div>
+
+                <h3 className="text-xl font-bold text-white">
+                  {project.title}
+                </h3>
+
+                <p className="text-purple-400 text-xs mt-2">
+                  Project #{project.id + 1}
+                </p>
+              </div>
             </div>
+
+            {/* Project Details */}
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className="text-xl font-bold text-white mb-3">
                 {project.title}
               </h3>
-              <p className="text-gray-500 mb-4 pt-4 line-clamp-3">
+
+              <p className="text-gray-400 text-sm leading-relaxed mb-5 line-clamp-3">
                 {project.description}
               </p>
-              <div className="mb-4">
+
+              {/* Tags */}
+              <div className="mb-5">
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="inline-block bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1 mr-2 mb-2"
+                    className="inline-block bg-[#251f38] text-xs font-semibold text-purple-400 rounded-full px-3 py-1 mr-2 mb-2"
                   >
                     {tag}
                   </span>
                 ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="flex gap-3">
+
+                {/* GitHub */}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2.5 rounded-xl font-semibold text-sm hover:scale-105 transition-all duration-300"
+                >
+                  <i className="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+
+                {/* Details */}
+                <button
+                  onClick={() => handleOpenModal(project)}
+                  className="flex-1 flex items-center justify-center gap-2 border border-purple-500 text-purple-400 py-2.5 rounded-xl font-semibold text-sm hover:bg-purple-500 hover:text-white transition-all duration-300"
+                >
+                  <i className="fa-solid fa-circle-info"></i>
+                  Details
+                </button>
+
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Modal Container */}
+      {/* Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative">
-            <div className="flex justify-end p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={handleCloseModal}
+        >
+          <div
+            className="bg-gray-900 rounded-2xl shadow-2xl w-[95%] max-w-2xl border border-gray-700 overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-5 border-b border-gray-700">
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                {selectedProject.title}
+              </h3>
+
               <button
                 onClick={handleCloseModal}
-                className="text-white text-3xl font-bold hover:text-purple-500"
+                className="text-gray-400 hover:text-white text-3xl transition"
               >
                 &times;
               </button>
             </div>
 
-            <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-gray-900 px-4">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="lg:w-full w-[95%] object-contain rounded-xl shadow-2xl"
-                />
-              </div>
-              <div className="lg:p-8 p-6">
-                <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-gray-400 mb-6 lg:text-base text-xs">
-                  {selectedProject.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {selectedProject.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                {  <a
-  href={selectedProject.github}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="22"
-    height="22"
-    fill="currentColor"
-    viewBox="0 0 16 16"
-  >
-    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59..." />
-  </svg>
-  View on GitHub
-</a>}
-                  {/* <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
+            {/* Modal Body */}
+            <div className="p-6">
+
+              {/* Description */}
+              <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                {selectedProject.description}
+              </p>
+
+              {/* Technologies */}
+              <h4 className="text-white font-semibold mb-3">
+                Technologies Used
+              </h4>
+
+              <div className="flex flex-wrap gap-2 mb-7">
+                {selectedProject.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="bg-[#251f38] text-xs font-semibold text-purple-400 rounded-full px-3 py-2"
                   >
-                    View Code
-                  </a> */}
-                  {/* <a
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Modal Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+
+                {/* GitHub Button */}
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300"
+                >
+                  <i className="fa-brands fa-github text-lg"></i>
+                  View GitHub
+                </a>
+
+                {/* Live Demo Button */}
+                {selectedProject.webapp && (
+                  <a
                     href={selectedProject.webapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
+                    className="flex-1 flex items-center justify-center gap-2 border border-purple-500 text-purple-400 py-3 rounded-xl font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
                   >
-                    View Live
-                  </a> */}
-                </div>
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
+                )}
+
               </div>
             </div>
           </div>

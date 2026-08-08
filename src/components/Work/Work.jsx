@@ -11,10 +11,11 @@ const Work = () => {
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
+  // <section id="work" className="py-20"></section>
 
   return (
     <section
-      id="projects"
+      id="work"
       className="py-20 px-[5vw] md:px-[7vw] lg:px-[10vw]"
     >
       {/* Section Heading */}

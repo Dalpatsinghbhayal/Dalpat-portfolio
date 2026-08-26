@@ -88,7 +88,7 @@ const About = () => {
 
             {/* Projects */}
             <a
-              href="#projects"
+              href="#work"
               className="inline-block text-purple-400 border border-purple-500 py-3 px-8 rounded-full text-lg font-bold transition duration-300 hover:bg-purple-500 hover:text-white hover:scale-105"
             >
               VIEW PROJECTS

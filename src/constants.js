@@ -407,5 +407,21 @@ export const projects = [
 
     webapp:
       "https://portfolio-js8d.vercel.app/"
-  }
+  },
+  {
+  id: 6,
+  title: "ShopNest",
+  description:
+    "A responsive e-commerce web application built with React.js and Tailwind CSS featuring product browsing, search, category filtering, wishlist, cart, checkout and order management.",
+  tags: [
+    "React.js",
+    "JavaScript",
+    "Tailwind CSS",
+    "React Router",
+    "Context API",
+    "LocalStorage",
+  ],
+  github: "https://github.com/Dalpatsinghbhayal/shopnest",
+  webapp: "https://shopnestcom-eight.vercel.app/",
+},
 ];

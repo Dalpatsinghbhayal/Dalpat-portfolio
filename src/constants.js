@@ -424,4 +424,19 @@ export const projects = [
   github: "https://github.com/Dalpatsinghbhayal/shopnest",
   webapp: "https://shopnestcom-eight.vercel.app/",
 },
+{
+  id: 7,
+  title: "TaskMan",
+  description:
+    "A responsive task management web application built with React.js and CSS featuring task creation, editing, deletion, status management, search, filtering and dark/light mode.",
+  tags: [
+    "React.js",
+    "JavaScript",
+    "CSS",
+    "React Hooks",
+    "LocalStorage",
+  ],
+  github: "https://github.com/Dalpatsinghbhayal/TaskMan",
+  webapp: "https://task-man-lime.vercel.app/",
+},
 ];
